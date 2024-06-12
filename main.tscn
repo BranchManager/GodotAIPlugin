@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://boeugm4pkhvyt"]
+
+[ext_resource type="Script" path="res://ollama.gd" id="1_4g466"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4g466")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "tootalie too skip me wi"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="BoxContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "tootalie too skip me wi"
+autowrap_mode = 3
+
+[node name="TextEdit" type="TextEdit" parent="BoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "sdf"
+placeholder_text = "Ask me 
+"
+metadata/_edit_use_anchors_ = true
